@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Number Guessing Game</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-600 to-purple-500 min-h-screen flex items-center justify-center text-white">
+  <div class="bg-white text-gray-800 p-8 rounded-xl shadow-xl w-full max-w-md">
+    <h1 class="text-3xl font-bold mb-4 text-center">🎯 Number Guessing Game</h1>
+    <p class="mb-2 text-center">Guess a number between <strong>1</strong> and <strong>5</strong></p>
+
+    {% if message %}
+      <div class="text-center mb-4 font-semibold text-lg {% if 'Correct' in message or '🎉' in message %}text-green-600{% elif 'Game Over' in message or '🚫' in message %}text-red-600{% else %}text-yellow-600{% endif %}">
+        {{ message }}
+      </div>
+    {% endif %}
+
+    {% if play_again %}
+      <div class="text-center">
+        <a href="{{ url_for('reset') }}" class="mt-4 inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
+          🔄 Play Again
+        </a>
+      </div>
+    {% elif session.difficulty is not defined %}
+      <!-- Difficulty selection -->
+      <form method="POST" class="space-y-4">
+        <label class="block text-center text-lg">Select Difficulty</label>
+        <div class="flex justify-around">
+          <button name="difficulty" value="easy" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">Easy</button>
+          <button name="difficulty" value="hard" class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded">Hard</button>
+        </div>
+      </form>
+    {% else %}
+      <!-- Guessing form -->
+      <form method="POST" class="space-y-4">
+        <input type="number" name="guess" min="1" max="5" required placeholder="Enter your guess"
+               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <button type="submit"
+                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded">
+          Submit
+        </button>
+      </form>
+      <p class="mt-4 text-center text-sm text-gray-500">Attempt: {{ session.attempts + 1 if session.attempts is defined else 1 }} / {{ session.max_attempts }}</p>
+    {% endif %}
+  </div>
+</body>
+</html>
