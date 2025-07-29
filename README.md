@@ -1,6 +1,6 @@
-###🎯 TooHighTooLow - Number Guessing Game
+# 🎯 TooHighTooLow - Number Guessing Game
 A fun and interactive web app built with Python (Flask) and styled using Tailwind CSS, where users try to guess a randomly generated number between 1 and 5.
-##🚀 Features
+## 🚀 Features
 🎮 Choose difficulty (Easy/Hard)
 
 🔐 Session-based game state tracking
@@ -15,7 +15,7 @@ A fun and interactive web app built with Python (Flask) and styled using Tailwin
 
 🌐 Clean UI using Tailwind CSS
 
-##🛠️ Technologies Used
+## 🛠️ Technologies Used
 Python
 
 Flask
@@ -26,9 +26,9 @@ Tailwind CSS
 
 Jinja2 (Flask Templating)
 
-##📷 Preview
+## 📷 Preview
 
-##📂 Project Structure
+## 📂 Project Structure
 ```bash
 TooHigh_Toolow/
 │
@@ -38,7 +38,7 @@ TooHigh_Toolow/
 ├── app.py
 └── README.md
 ```
-▶️ How to Run
+## ▶️ How to Run
 Clone the repository:
 
 ```bash
@@ -53,18 +53,18 @@ Run the app:
 ```bash
 python app.py
 ```
-#Open in browser:
+## Open in browser:
 
 ```
 Visit http://127.0.0.1:5000
 ```
 
-##📌 Notes
+## 📌 Notes
 Make sure app.py and templates/index.html are in place
 
 You can customize difficulty range and styling easily
 
-💡 Future Improvements
+## 💡 Future Improvements
 Add score history and leaderboard
 
 Add animations for feedback
