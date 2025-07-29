@@ -71,17 +71,17 @@ Add animations for feedback
 
 Allow custom number range
 
-##🧑‍💻 Author
-Muhammad Furqan
+## 🧑‍💻 Author
+Muhammad Furqan 
 BSc Computer Science
 University of Engineering & Technology, Peshawar
 📧 Email: furqanmf234@gmail.com
 
-##📬 Feedback & Contributions
+## 📬 Feedback & Contributions
 Pull requests and feedback are always welcome!
 If you find a bug or want to improve the project, feel free to open an issue or contribute 🚀
 
-##📃 License
+## 📃 License
 This project is licensed under the MIT License – see the LICENSE file for details.
 
 
