@@ -72,9 +72,9 @@ Add animations for feedback
 Allow custom number range
 
 ## 🧑‍💻 Author
-Muhammad Furqan 
-BSc Computer Science
-University of Engineering & Technology, Peshawar
+Muhammad Furqan  
+BSc Computer Science  
+University of Engineering & Technology, Peshawar  
 📧 Email: furqanmf234@gmail.com
 
 ## 📬 Feedback & Contributions
